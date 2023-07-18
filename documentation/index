@@ -1,0 +1,909 @@
+<h1 id="making-tax-digital-itsa-roadmap">Making Tax Digital ITSA Roadmap</h1>
+<p>Last updated: 6 July 2023</p>
+<h2 id="about-this-roadmap">About this roadmap</h2>
+<p>This roadmap sets out our anticipated schedule for future API releases. It also provides details of releases relating to
+the service delivered via other mechanisms, such as a User Interface.</p>
+<p><strong>What is a front end API?</strong></p>
+<p>A front end API is an API that will allow integration of various API endpoints into your software.</p>
+<p><strong>What can it do?</strong></p>
+<p>In the &lsquo;sandbox&rsquo; it will allow you to test the experience a customer would have using this functionality by sending back
+test responses that mimic the real customer environment. It will not work for real customers until the API is in
+production and HMRC back end functionality is available.</p>
+<p><strong>What is the back end functionality?</strong></p>
+<p>This is the functionality developed in HMRC which allows API endpoints to be integrated into your software to call a
+customer&rsquo;s information (or update a customer&rsquo;s record) required to complete certain transactions. This could include verifying a customer&rsquo;s details, in which case a request would be sent to HMRC and our back end
+functionality would check whether the customer information is correct. This would also be the way customers would send
+HMRC their updates, through the frontend API in your software, to the back end function in HMRC which would update their
+record.</p>
+<p><strong>When will the back end functionality be available?</strong></p>
+<p>The back end functionality is being developed in parallel with the front end APIs and their end points. We show on
+this roadmap when front end APIs will be available in sandbox or production that can connect to back end
+functionality.</p>
+<p><strong>What is controlled go-live?</strong></p>
+<p>Before releasing functionality to all our customers we will conduct testing with limited customers. This period is
+referred to as &lsquo;controlled go-live&rsquo; or private beta.</p>
+<h3 id="link-to-changelog-for-submission-apis">Link to changelog for submission APIs</h3>
+<p>Keep up to date with changes to the APIs in sandbox and production with our new changelog.</p>
+
+<ul>
+<li><a href="https://github.com/hmrc/income-tax-mtd-changelog">ITSA APIs changelog</a></li>
+</ul>
+<h3 id="current-endpoint-functionality-in-sandbox-and-production">Current endpoint functionality in sandbox and production</h3>
+<p>Keep up to date with changes to current endpoint functionality in sandbox and production by reviewing
+the <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api">Developer Hub API Documentation</a>.</p>
+<h2 id="software-data-submission-third-party-apis">Software Data Submission (third party APIs)</h2>
+<h3 id="current-itsa-api-functionality">Current ITSA API functionality</h3>
+<p>Deployed to Production <strong>July 2023</strong></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: center">HMRC Developer Hub API</th>
+<th style="text-align: center">Must be part of legislated quarterly updates?</th>
+<th style="text-align: center">Can be used in year?</th>
+<th style="text-align: center">Detail</th>
+<th style="text-align: center">Deployed to Sandbox</th>
+</tr><tr>
+<td style="text-align: center">Individuals Income Received (MTD) API v1.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">
+<strong>Off Payroll Working (OPW)</strong><br>  This change will allow customers to view an Off Payroll Working marker for each of their employment sources.  It will also allow customers to add or remove the marker where necessary.</td>
+<td style="text-align: center">Feb 2023</td>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) API v3.0</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">
+<strong>Calculation output updates</strong><br> Update of business validation calculation error and addition of new objects to the calculation output</td>
+<td style="text-align: center">Feb 2023</td>
+</tr><tr>
+<td style="text-align: center">Individuals Charges (MTD) API v1.0</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">
+<strong>Pension charges</strong><br>  3 data items - annual allowance reduced, tapered annual allowances and money purchase allowance are to be moved to the pension contributions section that sits in the same API</td>
+<td style="text-align: center">March 2023</td>
+</tr>
+        </table>
+      </div><p>Deployed to Production <strong>April 2023</strong></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: center">HMRC Developer Hub API</th>
+<th style="text-align: center">Must be part of legislated quarterly updates?</th>
+<th style="text-align: center">Can be used in year?</th>
+<th style="text-align: center">Detail</th>
+<th style="text-align: center">Deployed to Sandbox</th>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Class 2 NICs (Spring Statement)</strong><br>  Reduction to Class 2 NICs liabilities to nil on profits between the Small Profits Threshold (SPT) and Lower Profits Threshold (LPT).</td>
+<td style="text-align: center">Feb 2023</td>
+</tr><tr>
+<td style="text-align: center">Various APIs</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">
+<strong>Tax Year Specific (TYS) APIs</strong><br> Movement of the old APIs to new tax year specific APIs which means that software providers and user will need to use the new version of the APIs to report data from 23/24.</td>
+<td style="text-align: center">Nov 2022/Jan 2023</td>
+</tr><tr>
+<td style="text-align: center">Various APIs</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">
+<strong>Error status updates</strong><br> Change of 403 error status to 400 to make it consistent across all the APIs</td>
+<td style="text-align: center">Feb 2023</td>
+</tr><tr>
+<td style="text-align: center">Various APIs</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">
+<strong>Migration of existing RAML documentation to OAS</strong><br>   The new documentation platform to serve old and new API documentation with enhanced experience.</td>
+<td style="text-align: center">March 2023</td>
+</tr><tr>
+<td style="text-align: center">Various APIs</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">
+<strong>API changelog</strong><br> Switched the API changelog in GitHub from a wiki page to a &ldquo;readme&rdquo; file in a Markdown format. The readme file can be viewed at this URL: https://github.com/hmrc/income-tax-mtd-changelog Retained existing links and bookmarks on the wiki page. At the top of the wiki page, a link has been added for the new location, along with a note for the vendors. The new page includes step-by-step instructions on how to subscribe to receive notifications when the changelog is updated.</td>
+<td style="text-align: center">Feb 2023</td>
+</tr>
+        </table>
+      </div><p>Deployed to Production <strong>December 2022</strong></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: center">HMRC Developer Hub API</th>
+<th style="text-align: center">Must be part of legislated quarterly updates?</th>
+<th style="text-align: center">Can be used in year?</th>
+<th style="text-align: center">Detail</th>
+<th style="text-align: center">Deployed to Sandbox</th>
+</tr><tr>
+<td style="text-align: center">Self Assessment Accounts (MTD) API v1.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">
+<strong>Amendments in relation to employment coded out</strong><br>   This allows a user with employment income to request that they do not want their self assessment liability coded out for the 21/22 tax year onwards.  New endpoints have also been added.</td>
+<td style="text-align: center">Jan 2021</td>
+</tr><tr>
+<td style="text-align: center">Various APIs</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>API refactoring</strong><br> Refactoring of the API which includes repayment, payment information along with manual financial adjustments.</td>
+<td style="text-align: center">Oct 2022</td>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) version 3</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Tax Calculation API</strong><br> Refinement of Tax Calculation API by adding a tax year data item and reducing the number of endpoints in response to the software market demand.</td>
+<td style="text-align: center">Aug 2022</td>
+</tr><tr>
+<td style="text-align: center">Self Assessment Accounts (MTD) API v2.0</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Self-Assessment API</strong><br> The existing Self Assessment API (Self Employment, Gift Aid and Dividends and Interest) broken down into specific datasets APIs for Self-Employments, Charitable Giving, Interest and Dividends.</td>
+<td style="text-align: center">Oct 2022</td>
+</tr><tr>
+<td style="text-align: center">Property Business (MTD) API v2.0</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Migration of UK property historic data</strong><br> The existing UK property historic migration to a microservice i.e. Property Business API. Property historic covers data from 2017 to 2021. The UK property periodic endpoint is for the current and future tax year.</td>
+<td style="text-align: center">Oct 2022</td>
+</tr>
+        </table>
+      </div><p>Deployed to Production <strong>April 2022</strong></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: center">HMRC Developer Hub API</th>
+<th style="text-align: center">Must be part of legislated quarterly updates?</th>
+<th style="text-align: center">Can be used in year?</th>
+<th style="text-align: center">Detail</th>
+<th style="text-align: center">Deployed to Sandbox</th>
+</tr><tr>
+<td style="text-align: center">Property Business (MTD) API v2.0</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>UK Property</strong><br> UK Property has been added for tax year 22/23 onwards. This change is required so that both property business types, UK and Foreign can be supported by our systems.</td>
+<td style="text-align: center">Jan 2022</td>
+</tr><tr>
+<td style="text-align: center"></td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Enhancements to allowances</strong><br> Enhancement to the endpoints to include structure and building allowances and first year electric charge allowance for 22/23 tax year onwards in relation to Capital Allowances.</td>
+<td style="text-align: center">Jan 2022</td>
+</tr><tr>
+<td style="text-align: center"></td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Business validation rules</strong><br> Enhancements to the business validation rules for Property &amp; Capital Allowances only</td>
+<td style="text-align: center">Jan 2022</td>
+</tr><tr>
+<td style="text-align: center">Business Income Source Summary (MTD) v2.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Change to the status of a data item</strong><br> New version due to the business ID becoming mandatory.</td>
+<td style="text-align: center">Jan 2022</td>
+</tr><tr>
+<td style="text-align: center">Individual Losses (MTD) v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Change to the status of a data item</strong><br> New version due to the business ID becoming mandatory.</td>
+<td style="text-align: center">Jan 2022</td>
+</tr><tr>
+<td style="text-align: center">Business Source Adjustable Summary (MTD) v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Addition of new data fields</strong><br> New version due to restructuring and new fields being added.</td>
+<td style="text-align: center">Mar 2022</td>
+</tr><tr>
+<td style="text-align: center">Self-Employment Business v2.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Health and Social Care Levy</strong><br>  New calculation information messages to notify software of temporary increase to self-employed National Insurance Contributions (NICs) for the 22/23 tax year.</td>
+<td style="text-align: center">N/A</td>
+</tr>
+        </table>
+      </div><h3 id="future-itsa-api-deliverables">Future ITSA API deliverables</h3>
+<p>Scheduled to be deployed to Production <strong>December 2023</strong> (to be confirmed)</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: center">HMRC Developer Hub API</th>
+<th style="text-align: center">Must be part of legislated quarterly updates?</th>
+<th style="text-align: center">Can be used in year?</th>
+<th style="text-align: center">Detail</th>
+<th style="text-align: center">Target date for Sandbox</th>
+</tr><tr>
+<td style="text-align: center">Self-Employment Business (MTD) API v1.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Annual Updates of Business Income (Self Employment and Property)</strong><br> This enables customers to make in-year or annual submissions for their self employment and/or property income in specific scenarios.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Self-Employment Business (MTD) API v1.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Update regarding multiple income sources</strong><br>  The &lsquo;other tax taken off trading income&rsquo; object will be added to this API.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Self-Employment Business (MTD) API v1.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Update regarding self employment periods</strong><br>  The data fields within this API will be updated to allow negative values.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>View cease business income sources</strong><br>  These changes will enable the customer to see an updated calculation following the cease of a business being reported and multiple business/property sources being added.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Annuity/royalty payments charges</strong> Annuity/royalty payments charges will be calculated to decimal places to include pence. This will be a change to the calculation rules.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>State Pensions</strong><br> To enable the state pension to be identified within the tax calculation</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Self Assessment Individuals Details API</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>GET ITSA status</strong><br>  New GET API to source customer ITSA status e.g. MTD Mandated / MTD Voluntary / Annual etc.  This status can be used in software design to determine relevant services and content.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Property Business (MTD) API v2.0</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Data item no longer required</strong> <br> Removal of ‘losses brought forward’ in the annual self-employment/property business API.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individuals Expenses (MTD) API v1.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">TBC</td>
+<td style="text-align: center">
+<strong>Adding expenses</strong> <br> Updates to the occupational pension and employment expenses restricting the submission of benefits In Kind, potentially student loan deductions and employment expenses against that employment.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Business Details (MTD) API</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Retrieve multiple SE sources</strong> <br> Ability to view multiple business/property sources that are added outside of software.</td>
+<td style="text-align: center">TBC</td>
+</tr>
+        </table>
+      </div><p>Planned future deliveries</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: center">HMRC Developer Hub API</th>
+<th style="text-align: center">Must be part of legislated quarterly updates?</th>
+<th style="text-align: center">Can be used in year?</th>
+<th style="text-align: center">Detail</th>
+<th style="text-align: center">Deployed to Sandbox</th>
+</tr><tr>
+<td style="text-align: center">HMRC Assist</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>HMRC Assist</strong><br> Providing near real-time feedback to help customers get things right, messages are presented when a tax calculation is called. This API has been developed and will be delivered in 24/25 to support vendor testing of feedback messages</td>
+<td style="text-align: center">June 2023</td>
+</tr><tr>
+<td style="text-align: center">Business Income Source Summary (MTD) API v2.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Basic Rate Divergence</strong><br> View the updated basic rate based on changes made to the basic rate by the devolved nations.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Business Income Source Summary (MTD) API v2.0 and Property Business (MTD) API v2.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Basis Period Reform</strong><br> Customer election for month end ‘calendar quarters’ Customers must elect or withdraw election before any updates have been submitted for the tax year. This will be a new endpoint that all software products must support for all MTD customers</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Property Business (MTD) API v2.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">
+<strong>Report accounting period start and end dates for property</strong> – customers will provide this as part of their end of year return</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Property Business (MTD) API v2.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Managing Obligations</strong><br> This delivery will change the way in which obligations are marked as met by a customer from the request of tax calculation to the submission of data. This requires changes to some end points and BVRs.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Property Business (MTD) API v2.0</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Reassert number of rental properties</strong><br> Expand the property income submission API to allow a customer to reassert their number of rental properties and if they jointly let any of their rental properties for each tax year.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individuals Income Received (MTD) API v1.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">TBC</td>
+<td style="text-align: center">
+<strong>Asset Holding Company (AHC)</strong><br> 3 new data fields on the Capital Gains Tax schedule</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Business Source Adjustable Summary (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Error Code update</strong> from 503 to 422 for the wrong income source type in the path parameter</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Business Source Adjustable Summary (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Customer Amendments (amendments &amp; corrections)</strong><br> Allows amendments to be made to a customer’s declared information after the final declaration has been made with an amendment window</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Self Assessment Accounts (MTD) API v2.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Report accounting period start and end dates for self employment</strong> - customers will provide this as part of their end of year return</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Self Assessment Accounts (MTD) API v2.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Claim outside of the amendment window</strong><br> Enables amendments to be made outside the amendment window</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Self Assessment Accounts (MTD) API v2.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">
+<strong>Change accounting method (cash/accruals)</strong> - customers will provide this as part of their end of year return</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Self Assessment Accounts (MTD) API v2.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">
+<strong>Report accounting period start and end dates for self employment</strong> - customers will provide this as part of their end of year return</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individual Losses (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">
+<strong>Carry Back of Losses</strong><br> Enables losses incurred in one tax year to be set off against profits made in previous years, subject to rules.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individual Losses (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Claim outside of the amendment window</strong><br> Enables amendments to be made outside the amendment window</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">
+<strong>Repayment EOY</strong><br> There will be no provision to select an option for repayment in software this will be requested via HMRC online services – discovery will confirm design. Software will have provision to retrieve the repayment status, this will involve creating a new endpoint.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Residence and Remittance</strong><br> To enable software to support overseas customers with UK income.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Partner Income</strong><br> To enable software to support customers that have income from partnerships.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">
+<strong>HMRC Corrections (amendments &amp; corrections)</strong><br> Ability for HMRC to set correction window following final declaration/crystallisation (typically 12 months)</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>ITSA Upload Facility (End of Year Processing)</strong><br> To enable software to provide supporting attachments to support ITSA submissions</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Lloyds Underwriters</strong><br> To enable software to support Lloyd’s underwriters.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Averaging adjustments and special arrangements</strong><br> To enable software to support averaging adjustments</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Member of Parliament</strong><br> To enable software to support Member of Parliament</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individual Calculations (MTD) API v3.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Ministers of Religion</strong><br> To enable software to support ministers of religion.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Self-Employment Business (MTD) API v1.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>White space</strong><br> Support for submitting any other information as per SA return via software and ITSA submission service</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individuals State Benefits (MTD) API v1.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">
+<strong>High Income Child Benefit</strong><br> It will enable self employed customers with income over £50k to record a HICB liability, so the liability can be included in their tax calculation.</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individuals State Benefits (MTD) API v1.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Blind Persons Allowance</strong><br> To enable software to support blind persons allowance</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">Individuals State Benefits (MTD) API v1.0</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">
+<strong>Married Couples Allowance</strong><br> To enable software to support married couple’s allowance</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">TBC</td>
+<td style="text-align: center">TBC</td>
+<td style="text-align: center">TBC</td>
+<td style="text-align: center">
+<strong>ITSA Penalty Reform</strong><br> New endpoints to view penalty points and charges</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">TBC</td>
+<td style="text-align: center">TBC</td>
+<td style="text-align: center">TBC</td>
+<td style="text-align: center">
+<strong>Determinations</strong><br> New charge type description for balancing charge – new charge descriptions for the determination charge</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">TBC</td>
+<td style="text-align: center">TBC</td>
+<td style="text-align: center">TBC</td>
+<td style="text-align: center">
+<strong>Trust schedule</strong><br> To enable software to support customers that have income from trusts</td>
+<td style="text-align: center">TBC</td>
+</tr><tr>
+<td style="text-align: center">TBC</td>
+<td style="text-align: center">TBC</td>
+<td style="text-align: center">TBC</td>
+<td style="text-align: center">
+<strong>Three line accounts</strong><br> To enable software to support three line accounts</td>
+<td style="text-align: center">TBC</td>
+</tr>
+        </table>
+      </div><h2 id="itsa-submission-service">ITSA Submission Service</h2>
+<p>This is a new self assessment service for customers and their authorised agents to update and submit an income tax return, that will be available in HMRC online services.</p>
+<p>Customers in MTD will use this service to report income that is not supported in their software.</p>
+
+<ul>
+<li>Customers will <em>not</em> be able to use this service to send updates for business and property income with quarterly filing obligations.</li>
+<li>Non-MTD customers who are not using software will use this service to file their self assessment tax return once their record has migrated to the new service.</li>
+</ul>
+<h3 id="current-functionality-update-and-submit-an-income-tax-return">Current functionality - Update and submit an income tax return</h3>
+<p>Currently live</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: center">Functionality to report against income type</th>
+<th style="text-align: center">Can be used in year?</th>
+<th style="text-align: center">Status</th>
+<th style="text-align: center">Detail</th>
+</tr><tr>
+<td style="text-align: center">UK dividends</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+<td style="text-align: center">Report UK dividends.</td>
+</tr><tr>
+<td style="text-align: center">UK interest</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+<td style="text-align: center">Report UK interest.</td>
+</tr><tr>
+<td style="text-align: center">Charitable giving</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+<td style="text-align: center">Report charitable donations</td>
+</tr><tr>
+<td style="text-align: center">Employments (in year)</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+<td style="text-align: center">View employment information.</td>
+</tr><tr>
+<td style="text-align: center">Final Declaration</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Live</td>
+<td style="text-align: center">Finalise a self assessment tax return for a year</td>
+</tr><tr>
+<td style="text-align: center">Employments (End of Year)</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Live</td>
+<td style="text-align: center">Amend and/or add new employment details after the year end</td>
+</tr><tr>
+<td style="text-align: center">Student Loans</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Dec 22</td>
+<td style="text-align: center">Report Student Loan information</td>
+</tr>
+        </table>
+      </div><h3 id="future-functionality-update-and-submit-an-income-tax-return">Future functionality - Update and submit an income tax return</h3>
+<p>Planned future deliveries</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: center">Functionality to report against income type</th>
+<th style="text-align: center">Can be used in year?</th>
+<th style="text-align: center">Detail</th>
+</tr><tr>
+<td style="text-align: center">Tailor your Return</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Tailor an end of year return to ensure customers submit all income subject to income tax</td>
+</tr><tr>
+<td style="text-align: center">CIS</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Construction Industry Scheme</td>
+</tr><tr>
+<td style="text-align: center">Pensions</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report pensions</td>
+</tr><tr>
+<td style="text-align: center">Additional information</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Additional Information Part 1</td>
+</tr><tr>
+<td style="text-align: center">State Benefits</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report State Benefits</td>
+</tr><tr>
+<td style="text-align: center">Capital Gains Tax</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Capital Gains Tax</td>
+</tr><tr>
+<td style="text-align: center">Self-Employment</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Self Employment</td>
+</tr><tr>
+<td style="text-align: center">Property Income</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Property Income</td>
+</tr><tr>
+<td style="text-align: center">Foreign Income</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Foreign Income</td>
+</tr><tr>
+<td style="text-align: center">Off Payroll Working</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">View Off Payroll Working (OPW) marker after year end and offer customer the option to add/remove and submit to HMRC.  A warning message will be displayed to the customer if the marker is amended.</td>
+</tr><tr>
+<td style="text-align: center">Post Final Declaration (Crystallisation) Amendments</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Amend self assessment tax return</td>
+</tr><tr>
+<td style="text-align: center">Partner Income</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Partner Income</td>
+</tr><tr>
+<td style="text-align: center">High Income Child Benefit</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report High Income Child Benefit</td>
+</tr><tr>
+<td style="text-align: center">Trust Income</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report income from a Trust</td>
+</tr><tr>
+<td style="text-align: center">Additional Information</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Additional Information Part 2</td>
+</tr><tr>
+<td style="text-align: center">Residence and Remittance</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Support overseas customers with UK income.</td>
+</tr><tr>
+<td style="text-align: center">Members of Parliament</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report MP income</td>
+</tr><tr>
+<td style="text-align: center">Ministers of Religion</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Ministers of Religion Income</td>
+</tr><tr>
+<td style="text-align: center">Blind Persons Allowance</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Claim Blind Persons Allowance</td>
+</tr><tr>
+<td style="text-align: center">Lloyds Underwriters</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report income from funds at Lloyd&rsquo;s</td>
+</tr><tr>
+<td style="text-align: center">Married Couples Allowance</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Claim married couples allowance</td>
+</tr><tr>
+<td style="text-align: center">Marriage Allowance</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Claim Marriage Allowance</td>
+</tr><tr>
+<td style="text-align: center">Averaging adjustments and special arrangements</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report averaging adjustments &amp; special arrangements</td>
+</tr><tr>
+<td style="text-align: center">Carry back of losses</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Carry back losses from previous tax years</td>
+</tr><tr>
+<td style="text-align: center">Gift Aid budget changes</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Implement any devolved administration gift aid threshold changes into UI</td>
+</tr><tr>
+<td style="text-align: center">Insolvency</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Insolvency</td>
+</tr><tr>
+<td style="text-align: center">Cessation of Income</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report cessation of income</td>
+</tr><tr>
+<td style="text-align: center">Cash Accounting vs Traditional Accounting</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report use of cash accounting or traditional accounting</td>
+</tr>
+        </table>
+      </div><h2 id="apis-required-for-each-stage-of-development-of-a-minimum-functionality-standard-mfs-product">APIs required for each stage of development of a Minimum Functionality Standard (MFS) product</h2>
+<p>Mandatory APIs are denoted by X.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-c3ow">API Name</th>
+    <th class="tg-c3ow" colspan="3">Required at each stage for Self Assessment full product (MFS)</th>
+    <th class="tg-c3ow" colspan="3">Required at each stage for Property full product (MFS)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">Stage in the Customer Journey</td>
+    <td class="tg-c3ow">In-year</td>
+    <td class="tg-c3ow">End of Year</td>
+    <td class="tg-c3ow">Final Declaration</td>
+    <td class="tg-c3ow">In-year</td>
+    <td class="tg-c3ow">End of Year</td>
+    <td class="tg-c3ow">Final Declaration</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Business Details (MTD)</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Business Income Source Summary (MTD)</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Business Source Adjustable Summary (MTD)</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">CIS Deductions (MTD)</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Individual Calculations (MTD)</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Individual Losses (MTD)</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky">X</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Individuals Business End of Period Statement (MTD)</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Individual Charges (MTD)</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Individual Disclosures (MTD)</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky">X</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Individual Expenses (MTD)</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Individual Income Received (MTD)</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Individual Reliefs (MTD)</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Individual State Benefits (MTD)</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Obligations (MTD)</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Other Deductions (MTD)</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Property Business (MTD)</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Self Employment Business (MTD)</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky">X</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Self Assessment Accounts (MTD)</td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+    <td class="tg-0pky"> </td>
+  </tr>
+</tbody>
+</table>
+<p>We would welcome your feedback to improve our roadmap further.</p>
+<p>Please feel free to contact us: sdsteam@hmrc.gov.uk</p>
