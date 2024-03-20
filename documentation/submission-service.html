@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Online Service Roadmap | Income Tax (MTD) Roadmap - Income Tax (Making Tax Digital) roadmap</title>
+
+    <link href="../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="docs.developer.service.hmrc.gov.uk/documentation/submission-service.html">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="docs.developer.service.hmrc.gov.uk/images/govuk-large.png" />
+      <meta name="twitter:title" content="Online Service Roadmap | Income Tax (MTD) Roadmap - Income Tax (Making Tax Digital) roadmap" />
+      <meta name="twitter:url" content="docs.developer.service.hmrc.gov.uk/documentation/submission-service.html" />
+
+      <meta property="og:image" content="docs.developer.service.hmrc.gov.uk/images/govuk-large.png" />
+      <meta property="og:site_name" content="Income Tax (Making Tax Digital) roadmap" />
+      <meta property="og:title" content="Online Service Roadmap | Income Tax (MTD) Roadmap" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="docs.developer.service.hmrc.gov.uk/documentation/submission-service.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="https://developer.service.hmrc.gov.uk/roadmaps/mtd-itsa-vendors-roadmap/" class="govuk-header__link govuk-header__link--homepage">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-header__logotype-crown"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 30"
+          height="30"
+          width="32"
+        >
+          <path
+            fill="currentColor" fill-rule="evenodd"
+            d="M22.6 10.4c-1 .4-2-.1-2.4-1-.4-.9.1-2 1-2.4.9-.4 2 .1 2.4 1s-.1 2-1 2.4m-5.9 6.7c-.9.4-2-.1-2.4-1-.4-.9.1-2 1-2.4.9-.4 2 .1 2.4 1s-.1 2-1 2.4m10.8-3.7c-1 .4-2-.1-2.4-1-.4-.9.1-2 1-2.4.9-.4 2 .1 2.4 1s0 2-1 2.4m3.3 4.8c-1 .4-2-.1-2.4-1-.4-.9.1-2 1-2.4.9-.4 2 .1 2.4 1s-.1 2-1 2.4M17 4.7l2.3 1.2V2.5l-2.3.7-.2-.2.9-3h-3.4l.9 3-.2.2c-.1.1-2.3-.7-2.3-.7v3.4L15 4.7c.1.1.1.2.2.2l-1.3 4c-.1.2-.1.4-.1.6 0 1.1.8 2 1.9 2.2h.7c1-.2 1.9-1.1 1.9-2.1 0-.2 0-.4-.1-.6l-1.3-4c-.1-.2 0-.2.1-.3m-7.6 5.7c.9.4 2-.1 2.4-1 .4-.9-.1-2-1-2.4-.9-.4-2 .1-2.4 1s0 2 1 2.4m-5 3c.9.4 2-.1 2.4-1 .4-.9-.1-2-1-2.4-.9-.4-2 .1-2.4 1s.1 2 1 2.4m-3.2 4.8c.9.4 2-.1 2.4-1 .4-.9-.1-2-1-2.4-.9-.4-2 .1-2.4 1s0 2 1 2.4m14.8 11c4.4 0 8.6.3 12.3.8 1.1-4.5 2.4-7 3.7-8.8l-2.5-.9c.2 1.3.3 1.9 0 2.7-.4-.4-.8-1.1-1.1-2.3l-1.2 4c.7-.5 1.3-.8 2-.9-1.1 2.5-2.6 3.1-3.5 3-1.1-.2-1.7-1.2-1.5-2.1.3-1.2 1.5-1.5 2.1-.1 1.1-2.3-.8-3-2-2.3 1.9-1.9 2.1-3.5.6-5.6-2.1 1.6-2.1 3.2-1.2 5.5-1.2-1.4-3.2-.6-2.5 1.6.9-1.4 2.1-.5 1.9.8-.2 1.1-1.7 2.1-3.5 1.9-2.7-.2-2.9-2.1-2.9-3.6.7-.1 1.9.5 2.9 1.9l.4-4.3c-1.1 1.1-2.1 1.4-3.2 1.4.4-1.2 2.1-3 2.1-3h-5.4s1.7 1.9 2.1 3c-1.1 0-2.1-.2-3.2-1.4l.4 4.3c1-1.4 2.2-2 2.9-1.9-.1 1.5-.2 3.4-2.9 3.6-1.9.2-3.4-.8-3.5-1.9-.2-1.3 1-2.2 1.9-.8.7-2.3-1.2-3-2.5-1.6.9-2.2.9-3.9-1.2-5.5-1.5 2-1.3 3.7.6 5.6-1.2-.7-3.1 0-2 2.3.6-1.4 1.8-1.1 2.1.1.2.9-.3 1.9-1.5 2.1-.9.2-2.4-.5-3.5-3 .6 0 1.2.3 2 .9l-1.2-4c-.3 1.1-.7 1.9-1.1 2.3-.3-.8-.2-1.4 0-2.7l-2.9.9C1.3 23 2.6 25.5 3.7 30c3.7-.5 7.9-.8 12.3-.8"></path>
+        </svg>
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+        <span class="govuk-header__product-name">
+          Income Tax (Making Tax Digital) roadmap
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <nav class="govuk-header__navigation govuk-header__navigation--end" aria-label="Menu">
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu">Menu</button>
+        <ul id="navigation" class="govuk-header__navigation-list">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://developer.service.hmrc.gov.uk/api-documentation">Developer Hub</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/">Service Guide</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://github.com/hmrc/income-tax-mtd-changelog">API Changelog</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api?filter=income-tax-mtd">API Documentation</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://developer.service.hmrc.gov.uk/developer/applications">Applications</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://developer.service.hmrc.gov.uk/developer/support">Support</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
+              <div class="search" data-module="search" data-path-to-site-root="../">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="docs.developer.service.hmrc.gov.uk"/>
+    <label class="govuk-label search__label" for="search" aria-hidden="true">
+      Search (via Google)
+    </label>
+    <input
+      type="text"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
+                      <ul>
+  <li>
+    <a href="../index.html"><span>Income Tax (Making Tax Digital) roadmap</span></a>
+    <ul>
+      <li>
+        <a href="../index.html#about-this-roadmap"><span>About this roadmap</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="../documentation/apis.html"><span>APIs</span></a>
+    <ul>
+      <li>
+        <a href="../documentation/apis.html#what-we-39-re-working-on-now"><span>What we’re working on now</span></a>
+        <ul>
+          <li>
+            <a href="../documentation/apis.html#april-2024"><span>April 2024</span></a>
+          </li>
+          <li>
+            <a href="../documentation/apis.html#june-2024"><span>June 2024</span></a>
+          </li>
+          <li>
+            <a href="../documentation/apis.html#september-2024-tbc"><span>September 2024 (TBC)</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="../documentation/apis.html#planned-future-deliveries"><span>Planned future deliveries</span></a>
+      </li>
+      <li>
+        <a href="../documentation/apis.html#already-released"><span>Already released</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="../documentation/submission-service.html"><span>HMRC online services</span></a>
+    <ul>
+      <li>
+        <a href="../documentation/submission-service.html#current-functionality"><span>Current functionality</span></a>
+      </li>
+      <li>
+        <a href="../documentation/submission-service.html#future-functionality"><span>Future functionality</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="../documentation/mfs.html"><span>Minimum functionality standard</span></a>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="hmrc-online-services">HMRC online services</h1>
+<p>A new Income Tax self assessment service for customers and their authorised agents to update and submit an income tax return is being made available in HMRC online services.</p>
+<p>Customers in MTD will use this service to report income that is not supported in their software.</p>
+
+<ul>
+<li>Customers will <em>not</em> be able to use this service to send updates for business and property income with quarterly filing obligations.</li>
+<li>Non-MTD customers who are not using software will use this service to file their self assessment tax return once their record has migrated to the new service.</li>
+</ul>
+<h2 id="current-functionality">Current functionality</h2>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: center">Functionality to report against income type</th>
+<th style="text-align: center">Can be used in year?</th>
+<th style="text-align: center">Status</th>
+<th style="text-align: center">Change</th>
+</tr><tr>
+<td style="text-align: center">UK dividends</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+<td style="text-align: center">Report UK dividends.</td>
+</tr><tr>
+<td style="text-align: center">UK interest</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+<td style="text-align: center">Report UK interest.</td>
+</tr><tr>
+<td style="text-align: center">Charitable giving</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+<td style="text-align: center">Report charitable donations</td>
+</tr><tr>
+<td style="text-align: center">Employments (in year)</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+<td style="text-align: center">View employment information.</td>
+</tr><tr>
+<td style="text-align: center">Final Declaration</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Live</td>
+<td style="text-align: center">Finalise a self assessment tax return for a year</td>
+</tr><tr>
+<td style="text-align: center">Employments (End of Year)</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Live</td>
+<td style="text-align: center">Amend and/or add new employment details after the year end</td>
+</tr><tr>
+<td style="text-align: center">Student Loans</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Live</td>
+<td style="text-align: center">Report Student Loan information</td>
+</tr>
+        </table>
+      </div><h2 id="future-functionality">Future functionality</h2>
+<p>Planned future deliveries.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: center">Functionality to report against income type</th>
+<th style="text-align: center">Can be used in year?</th>
+<th style="text-align: center">Change</th>
+</tr><tr>
+<td style="text-align: center">Tailor your Return</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Tailor an end of year return to ensure customers submit all income subject to income tax</td>
+</tr><tr>
+<td style="text-align: center">CIS</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Construction Industry Scheme</td>
+</tr><tr>
+<td style="text-align: center">Pensions</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report pensions</td>
+</tr><tr>
+<td style="text-align: center">Additional information</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Additional Information Part 1</td>
+</tr><tr>
+<td style="text-align: center">State Benefits</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report State Benefits</td>
+</tr><tr>
+<td style="text-align: center">Capital Gains Tax</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Capital Gains Tax</td>
+</tr><tr>
+<td style="text-align: center">Self-Employment</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Self Employment</td>
+</tr><tr>
+<td style="text-align: center">Property Income</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Property Income</td>
+</tr><tr>
+<td style="text-align: center">Foreign Income</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Foreign Income</td>
+</tr><tr>
+<td style="text-align: center">Off Payroll Working</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">View Off Payroll Working (OPW) marker after year end and offer customer the option to add/remove and submit to HMRC.  A warning message will be displayed to the customer if the marker is amended.</td>
+</tr><tr>
+<td style="text-align: center">Post Final Declaration (Crystallisation) Amendments</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Amend self assessment tax return</td>
+</tr><tr>
+<td style="text-align: center">Partner Income</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Partner Income</td>
+</tr><tr>
+<td style="text-align: center">High Income Child Benefit</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report High Income Child Benefit</td>
+</tr><tr>
+<td style="text-align: center">Trust Income</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report income from a Trust</td>
+</tr><tr>
+<td style="text-align: center">Additional Information</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Additional Information Part 2</td>
+</tr><tr>
+<td style="text-align: center">Residence and Remittance</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Support overseas customers with UK income.</td>
+</tr><tr>
+<td style="text-align: center">Members of Parliament</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report MP income</td>
+</tr><tr>
+<td style="text-align: center">Ministers of Religion</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Ministers of Religion Income</td>
+</tr><tr>
+<td style="text-align: center">Blind Persons Allowance</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Claim Blind Persons Allowance</td>
+</tr><tr>
+<td style="text-align: center">Lloyds Underwriters</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report income from funds at Lloyd&rsquo;s</td>
+</tr><tr>
+<td style="text-align: center">Married Couples Allowance</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Claim married couples allowance</td>
+</tr><tr>
+<td style="text-align: center">Marriage Allowance</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Claim Marriage Allowance</td>
+</tr><tr>
+<td style="text-align: center">Averaging adjustments and special arrangements</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report averaging adjustments &amp; special arrangements</td>
+</tr><tr>
+<td style="text-align: center">Carry back of losses</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Carry back losses from previous tax years</td>
+</tr><tr>
+<td style="text-align: center">Gift Aid budget changes</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Implement any devolved administration gift aid threshold changes into UI</td>
+</tr><tr>
+<td style="text-align: center">Insolvency</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report Insolvency</td>
+</tr><tr>
+<td style="text-align: center">Cessation of Income</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report cessation of income</td>
+</tr><tr>
+<td style="text-align: center">Cash Accounting vs Traditional Accounting</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report use of cash accounting or traditional accounting</td>
+</tr><tr>
+<td style="text-align: center">Coding out</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Present and transfer an underpayment</td>
+</tr><tr>
+<td style="text-align: center">Autocoding</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Report and amend non-PAYE income, reliefs or expenses</td>
+</tr>
+        </table>
+      </div>
+            
+          </main>
+
+          <aside>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43414424-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'displayFeaturesTask', null);
+  ga('set', 'transport', 'beacon');
+  ga('set', 'page', location.pathname+location.search+location.hash);
+  ga('send', 'pageview');
+  </script>
+
+    <script src="../javascripts/application.js"></script>
+  </body>
+</html>
