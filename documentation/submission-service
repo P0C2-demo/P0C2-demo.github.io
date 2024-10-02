@@ -1,0 +1,197 @@
+<h1 id="hmrc-online-services">HMRC online services</h1>
+<p>A new service for customers and their authorised agents to update and submit an Income Tax return is being made available in HMRC online services.</p>
+<p>Customers in MTD will use this service to report income that is not supported in their software.</p>
+
+<ul>
+<li>Customers will <em>not</em> be able to use this service to send updates for business and property income with quarterly filing obligations.</li>
+<li>Non-MTD customers who are not using software will use this service to file their self assessment tax return once their record has migrated to the new service.</li>
+</ul>
+<h2 id="current-functionality">Current functionality</h2>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: left">Functionality to report against income type</th>
+<th style="text-align: left">Change</th>
+<th style="text-align: center"><a href="#def_uiy">Usable in year?</a></th>
+<th style="text-align: center">Status</th>
+</tr><tr>
+<td style="text-align: left">UK dividends</td>
+<td style="text-align: left">Report UK dividends</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+</tr><tr>
+<td style="text-align: left">UK interest</td>
+<td style="text-align: left">Report UK interest</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+</tr><tr>
+<td style="text-align: left">Charitable giving</td>
+<td style="text-align: left">Report charitable donations</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+</tr><tr>
+<td style="text-align: left">Employments (in year)</td>
+<td style="text-align: left">View employment information</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+</tr><tr>
+<td style="text-align: left">Final declaration</td>
+<td style="text-align: left">Finalise a self assessment tax return for a year</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Live</td>
+</tr><tr>
+<td style="text-align: left">Employments (end of year)</td>
+<td style="text-align: left">Amend and/or add new employment details after the year end</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Live</td>
+</tr><tr>
+<td style="text-align: left">Student loans</td>
+<td style="text-align: left">Report student loan information</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Live</td>
+</tr><tr>
+<td style="text-align: left">CIS</td>
+<td style="text-align: left">Report Construction Industry Scheme</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+</tr><tr>
+<td style="text-align: left">Additional information</td>
+<td style="text-align: left">Report Additional Information Part 1</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+</tr><tr>
+<td style="text-align: left">State benefits</td>
+<td style="text-align: left">Report Jobseeker&rsquo;s and Employment and Support Allowance</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+</tr><tr>
+<td style="text-align: left">Off-payroll working</td>
+<td style="text-align: left">View off-payroll working (OPW) marker after year end and offer customer the option to add/remove and submit to HMRC.  A warning message will be displayed to the customer if the marker is amended.</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">Live</td>
+</tr>
+        </table>
+      </div><h2 id="future-functionality">Future functionality</h2>
+<p>Planned future deliveries.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: left">Functionality to report against income type</th>
+<th style="text-align: left">Change</th>
+<th style="text-align: center"><a href="#def_uiy">Usable in year?</a></th>
+</tr><tr>
+<td style="text-align: left">Tailor your return</td>
+<td style="text-align: left">Tailor an end of year return to ensure customers submit all income subject to income tax</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Pensions</td>
+<td style="text-align: left">Report pensions</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Capital Gains Tax</td>
+<td style="text-align: left">Report Capital Gains Tax</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Self-employment</td>
+<td style="text-align: left">Report self-employment</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Property income</td>
+<td style="text-align: left">Report property income</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Foreign income</td>
+<td style="text-align: left">Report foreign income</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Post final declaration amendments</td>
+<td style="text-align: left">Amend self assessment tax return</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Partner income</td>
+<td style="text-align: left">Report partner income</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">High Income Child Benefit</td>
+<td style="text-align: left">Report High Income Child Benefit</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Trust income</td>
+<td style="text-align: left">Report income from a trust</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Additional information</td>
+<td style="text-align: left">Report Additional Information Part 2</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Residence and remittance</td>
+<td style="text-align: left">Support overseas customers with UK income</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Members of Parliament</td>
+<td style="text-align: left">Report MP income</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Ministers of religion</td>
+<td style="text-align: left">Report ministers of religion income</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Blind Person&rsquo;s Allowance</td>
+<td style="text-align: left">Claim Blind Person&rsquo;s Allowance</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Lloyd&rsquo;s underwriters</td>
+<td style="text-align: left">Report income from funds at Lloyd&rsquo;s</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Married Couple&rsquo;s Allowance</td>
+<td style="text-align: left">Claim Married Couple&rsquo;s Allowance</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Marriage Allowance</td>
+<td style="text-align: left">Claim Marriage Allowance</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Averaging adjustments and special arrangements</td>
+<td style="text-align: left">Report averaging adjustments &amp; special arrangements</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Carry back of losses</td>
+<td style="text-align: left">Carry back losses from previous tax years</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Gift Aid budget changes</td>
+<td style="text-align: left">Implement any devolved administration gift aid threshold changes into UI</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Insolvency</td>
+<td style="text-align: left">Report insolvency</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Cessation of income</td>
+<td style="text-align: left">Report cessation of income</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Cash accounting vs traditional accounting</td>
+<td style="text-align: left">Report use of cash accounting or traditional accounting</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Coding out</td>
+<td style="text-align: left">Present and transfer an underpayment</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Autocoding</td>
+<td style="text-align: left">Report and amend non-PAYE income, reliefs or expenses</td>
+<td style="text-align: center">Yes</td>
+</tr><tr>
+<td style="text-align: left">Other state benefits</td>
+<td style="text-align: left">Report other state benefits</td>
+<td style="text-align: center">Yes</td>
+</tr>
+        </table>
+      </div><p><strong>Usable in year</strong></p>
+<p><a name="def_uiy"></a></p>
+<p>This means that the functionality is available during the active tax year to report against. 
+For example, transitional profit can be reported during the active tax year.</p>
+<p>If &ldquo;Usable in year?&rdquo; is &ldquo;No&rdquo;, the functionality is not available until after the tax year has ended. 
+For example, High Income Child Benefit liability cannot be reported until after the tax year has ended.</p>

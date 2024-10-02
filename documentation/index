@@ -1,7 +1,11 @@
-<h1 id="income-tax-making-tax-digital-roadmap">Income Tax (Making Tax Digital) roadmap</h1>
-<p>Last updated: 19 March 2024</p>
+<h1 id="making-tax-digital-for-income-tax-roadmap">Making Tax Digital for Income Tax roadmap</h1>
+<p>Last updated: 25 September 2024 (see <a href="#document-changelog">changelog</a>)</p>
+
+<blockquote>
+<p><strong>Help us improve this roadmap</strong>: <a href="https://docs.google.com/forms/d/e/1FAIpQLSe9jb0WCXWO9yt6zLBTKZLSK2oiTQcGPD96CTiwnQF0QxH5Tw/viewform">leave your feedback here</a>.</p>
+</blockquote>
 <h2 id="about-this-roadmap">About this roadmap</h2>
-<p>This roadmap sets out our anticipated schedule for future releases for Income Tax (Making Tax Digital) APIs. It also provides details of releases relating to
+<p>This roadmap sets out our anticipated schedule for future releases for Making Tax Digital for Income Tax APIs. It also provides details of releases relating to
 the service delivered via other mechanisms, such as a user interface.</p>
 <p><strong>What is a front end API?</strong></p>
 <p>A front end API is an API that will allow integration of various API endpoints into your software.</p>
@@ -20,9 +24,55 @@ record.</p>
 this roadmap when front end APIs will be available in sandbox or production that can connect to back end
 functionality.</p>
 <p><strong>What is controlled go-live?</strong></p>
-<p>Before releasing functionality to all our customers we will conduct testing with limited customers. This period is
-referred to as &lsquo;controlled go-live&rsquo; or private beta.</p>
+<p>Before releasing functionality to all our customers we will conduct testing with limited customers. This period is referred to as &lsquo;controlled go-live&rsquo; or private beta.</p>
+<h2 id="document-changelog">Document changelog</h2>
+<p><strong>25 September 2024</strong></p>
 
-<hr>
-<p>We would welcome your feedback to improve our roadmap further.</p>
-<p>Please feel free to contact us: sdsteam@hmrc.gov.uk</p>
+<ul>
+<li>Update &lsquo;Pension lifetime allowance&rsquo; and &lsquo;Scottish Rate&rsquo; in APIs roadmap to reflect that they are now deployed to Sandbox</li>
+</ul>
+<p><strong>24 September 2024</strong></p>
+
+<ul>
+<li>Update &lsquo;EOPS removal&rsquo; entry in APIs roadmap to make clear that it applies to all tax years</li>
+</ul>
+<p><strong>19 September 2024</strong></p>
+
+<ul>
+<li>Update APIs roadmap
+
+<ul>
+<li>Payments on account history released</li>
+<li>Make &ldquo;Deploy to Sandbox&rdquo; column clearer</li>
+</ul></li>
+</ul>
+<p><strong>8 August 2024</strong></p>
+
+<ul>
+<li>Add details of affected tax years to APIs roadmap</li>
+<li>Update Sandbox deployment date for &lsquo;Multiple agents&rsquo; to October 2024</li>
+</ul>
+<p><strong>5 August 2024</strong></p>
+
+<ul>
+<li>Update name of service to &lsquo;Making Tax Digital for Income Tax&rsquo;</li>
+</ul>
+<p><strong>8 July 2024</strong></p>
+
+<ul>
+<li><p>Update APIs roadmap</p>
+
+<ul>
+<li>September 2024 table update</li>
+<li>Add expected changes for December 2024 and April 2025</li>
+<li>Add &ldquo;Post-finalisation amendment&rdquo; and &ldquo;Opt back in to MTD&rdquo; to <strong>Planned future deliveries</strong></li>
+<li>Move &ldquo;High Income Child Benefit&rdquo; to <strong>Planned future deliveries</strong></li>
+<li>Add indication of breaking/non-breaking changes</li>
+</ul></li>
+<li><p>Update HMRC online services roadmap</p>
+
+<ul>
+<li>Add reporting of Construction Industry Scheme, additional information and off-payroll working to <strong>Current functionality</strong></li>
+<li>Updated state benefits entries to show that Jobseeker’s Allowance and Employment and Support Allowance can now be reported</li>
+</ul></li>
+</ul>
