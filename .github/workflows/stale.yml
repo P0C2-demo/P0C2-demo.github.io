@@ -1,7 +1,9 @@
 name: Notify Stale PRs for Multiple Repos
 
 on:
-   workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"  # Optional: runs daily at midnight UTC
+  workflow_dispatch:  # Enables manual triggering
 
 jobs:
   stale-pr-check:
@@ -9,13 +11,10 @@ jobs:
     strategy:
       matrix:
         repo: 
-          # List of all the repos to be monitored
-          - hmrc/business-details-api 
-          - hmrc/cis-deductions-api 
-          - hmrc/individual-calculations-api
-          - hmrc/individual-losses-api
-          - hmrc/individuals-business-eops-api
-          - hmrc/self-assessment-bsas-api 
+          # List the repositories you want to monitor in the format "owner/repo"
+          - owner/repo1
+          - owner/repo2
+          - owner/repo3
 
     steps:
     - name: Checkout the repository
@@ -27,9 +26,11 @@ jobs:
       with:
         script: |
           const staleDays = 30; // Define how many days you consider "stale"
+          const [owner, repo] = "${{ matrix.repo }}".split("/"); // Split the owner and repo from matrix
+
           const { data: pullRequests } = await github.pulls.list({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
+            owner: owner,  // Explicitly pass the owner
+            repo: repo,    // Explicitly pass the repo
             state: 'open',
           });
 
@@ -40,19 +41,24 @@ jobs:
             const lastUpdated = new Date(pr.updated_at);
             const diffTime = Math.abs(now - lastUpdated);
             const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            
             if (diffDays > staleDays) {
-              stalePRs.push(`#${pr.number}: ${pr.title} (by @${pr.user.login} ${diffDays} days ago)`);
+              // Capture PR number, title, author, and how many days since the last update
+              stalePRs.push(
+                `#${pr.number}: ${pr.title} (by @${pr.user.login}, Updated ${diffDays} days ago)`
+              );
             }
           });
           
           if (stalePRs.length > 0) {
             const stalePRList = stalePRs.join("\n");
+            console.log(`Stale PRs in repository: ${repo}\n${stalePRList}`);
             core.setOutput('stale_pr_list', stalePRList);
             core.setOutput('has_stale_prs', 'true');
           } else {
+            console.log(`No stale PRs found in repository: ${repo}`);
             core.setOutput('has_stale_prs', 'false');
           }
-
  #   - name: Send email if there are stale PRs
  #     if: steps.check_prs.outputs.has_stale_prs == 'true'
  #     uses: dawidd6/action-send-mail@v3
