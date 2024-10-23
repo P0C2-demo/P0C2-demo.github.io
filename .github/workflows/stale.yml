@@ -1,0 +1,70 @@
+name: Notify Stale PRs for Multiple Repos
+
+on:
+   workflow_dispatch:
+
+jobs:
+  stale-pr-check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repo: 
+          # List of all the repos to be monitored
+          - hmrc/business-details-api 
+          - hmrc/cis-deductions-api 
+          - hmrc/individual-calculations-api
+          - hmrc/individual-losses-api
+          - hmrc/individuals-business-eops-api
+          - hmrc/self-assessment-bsas-api 
+
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v3
+
+    - name: Check for stale PRs
+      id: check_prs
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const staleDays = 30; // Define how many days you consider "stale"
+          const { data: pullRequests } = await github.pulls.list({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            state: 'open',
+          });
+
+          const now = new Date();
+          let stalePRs = [];
+          
+          pullRequests.forEach(pr => {
+            const lastUpdated = new Date(pr.updated_at);
+            const diffTime = Math.abs(now - lastUpdated);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            if (diffDays > staleDays) {
+              stalePRs.push(`#${pr.number}: ${pr.title} (by @${pr.user.login} ${diffDays} days ago)`);
+            }
+          });
+          
+          if (stalePRs.length > 0) {
+            const stalePRList = stalePRs.join("\n");
+            core.setOutput('stale_pr_list', stalePRList);
+            core.setOutput('has_stale_prs', 'true');
+          } else {
+            core.setOutput('has_stale_prs', 'false');
+          }
+
+ #   - name: Send email if there are stale PRs
+ #     if: steps.check_prs.outputs.has_stale_prs == 'true'
+ #     uses: dawidd6/action-send-mail@v3
+ #     with:
+ #       server_address: smtp.example.com  # Replace with your SMTP server
+ #       server_port: 465  # Use appropriate port (e.g., 587 for TLS, 465 for SSL)
+ #       username: ${{ secrets.SMTP_USERNAME }}  # Store SMTP credentials in secrets
+ #       password: ${{ secrets.SMTP_PASSWORD }}
+ #       subject: "Stale PRs in Repository ${{ matrix.repo }}"
+ #       body: |
+ #         The following PRs in ${{ matrix.repo }} are stale (not updated in over 30 days):
+
+ #          ${{ steps.check_prs.outputs.stale_pr_list }}
+ #       to: recipient@example.com  # Replace with the email recipient
+ #       from: sender@example.com  # Replace with the sender's email address
